@@ -1,5 +1,7 @@
 ﻿using FreeCourse.Shared.Dtos;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace FreeCourse.Services.Discount.Services
@@ -17,6 +19,5 @@ namespace FreeCourse.Services.Discount.Services
         Task<Response<NoContent>> Delete(int id);
 
         Task<Response<Models.Discount>> GetByCodeAndUserId(string code, string userId);
-
     }
 }

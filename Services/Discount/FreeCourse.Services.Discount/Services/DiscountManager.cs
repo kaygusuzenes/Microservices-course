@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace FreeCourse.Services.Discount.Services
 {
-    public class IDiscountManager : IDiscountService
+    public class DiscountManager : IDiscountService
     {
         private readonly IConfiguration _configuration;
         private readonly IDbConnection _dbConnection;
 
-        public IDiscountManager(IConfiguration configuration)
+        public DiscountManager(IConfiguration configuration)
         {
             _configuration = configuration;
             _dbConnection = new NpgsqlConnection(_configuration.GetConnectionString("PostgreSql"));
